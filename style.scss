@@ -162,5 +162,141 @@ body {
                 }
             }
         }
+
+        .subscribeSection{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 70vh;
+            margin: 15vh 0;
+
+            h2{
+                font-size: 2rem;
+                font-weight: 700;
+                padding-bottom: 20px;
+                color: black;
+            }
+
+            span{
+                color: $grey-color;
+                padding-bottom: 20px;
+            }
+
+            > div{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: #F8F8F8;
+                width: 80%;
+
+                @media screen and (max-width: 600px) {
+                    width: 100%;
+                }
+
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+                    width: 100%;
+
+                    > div{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        gap: 30px;
+
+                        @media screen and (max-width: 600px) {
+                            gap: 16px;
+                        }
+
+                        .formNoms, .formCoords, .formAdresse{
+                            display: flex;
+                            align-items: center;
+                            flex-direction: row;
+                            width: 80%;
+                            gap: 4%;
+
+                            @media screen and (max-width: 600px) {
+                                flex-direction: column;
+                                gap: 16px;
+                            }
+                        }
+
+                        .formCoords{
+                            input:nth-child(1){
+                                width: 160%;
+
+                                @media screen and (max-width: 600px) {
+                                    width: 100%;
+                                }
+                            }
+                        }
+
+                        .formAdresse{
+                            input:nth-child(1){
+                                width: 25%;
+
+                                @media screen and (max-width: 600px) {
+                                    width: 100%;
+                                }
+                            }
+                        }
+
+                        input{
+                            width: 80%;
+                            padding: 12px 24px;
+                            border-radius: 10px;
+                            border: none;
+                            background-color: #F8F8F8;
+                            font-weight: 500;
+                            font-size: 1.2rem;
+                            cursor: pointer;
+                            box-shadow: 4px 4px 8px $grey-color;
+                            border: rgba(255, 255, 255, 0) 2px solid;
+
+                            @media screen and (max-width: 600px) {
+                                width: 100%;
+                            }
+                        }
+                        input::placeholder{
+                            color: $grey-color;
+                        }
+
+                        input:focus{
+                            outline: none;
+                        }
+
+                        .valid{
+                            border: #058E3F 2px solid;
+                        }
+
+                        .error{
+                            border: #E60000 2px solid;
+                        }
+                    }
+
+                    button{
+                        padding: 15px 25px;
+                        border-radius: 10px;
+                        border: none;
+                        background-color: #3B4FDF;
+                        color: #F8F8F8;
+                        font-weight: 500;
+                        font-size: 1.2rem;
+                        cursor: pointer;
+                        margin-top: 40px;
+                    }
+                    button:hover{
+                        background-color: rgb(26, 44, 174);
+                    }
+                }
+            }
+        }
     }
 }
