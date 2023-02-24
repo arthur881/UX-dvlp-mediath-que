@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0dc9ca92-8799-4c82-ac6e-90d10c81286c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/build.css" beforeDir="false" afterPath="$PROJECT_DIR$/build.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/build.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/style.scss" afterDir="false" />
-    </list>
+    <list default="true" id="0dc9ca92-8799-4c82-ac6e-90d10c81286c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +12,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/style.scss" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -43,7 +41,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677222473922</updated>
-      <workItem from="1677222475228" duration="3228000" />
+      <workItem from="1677222475228" duration="4111000" />
     </task>
     <servers />
   </component>

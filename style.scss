@@ -16,9 +16,6 @@ $CTA-color: #3B4FDF;
 
 body {
     background-color: $light-color;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 50px;
     position: relative;
     overflow-x: hidden;
 
@@ -58,6 +55,8 @@ body {
         transform: translateX(0);
     }
     header {
+        max-width: 1300px;
+        margin: 0 auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -100,6 +99,9 @@ body {
         }
     }
     main {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 50px;
         .hero {
             display: flex;
             justify-content: center;
@@ -338,6 +340,158 @@ body {
                         background-color: rgb(26, 44, 174);
                     }
                 }
+            }
+        }
+    }
+    footer{
+        height: 40vh;
+        background-color: #353738;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 80%;
+
+        @media screen and (max-width: 767px) {
+            height: 100vh;
+        }
+
+        #haut{
+            width: 80%;
+            height: 75%;
+            display: flex;
+            border-bottom: 2px solid $grey-color;
+            margin-top: 15px;
+            @media screen and (max-width: 767px) {
+                flex-direction: column;
+                height: 85%;
+            }
+            #gauche{
+                height: 100%;
+                width: 30%;
+
+                @media screen and (max-width: 767px) {
+                    height: 33%;
+                    width: 100%;
+                    border-bottom: 2px solid $grey-color;
+                }
+                #logofooter{
+                    height: 40%;
+                    width: 100%;
+                    h2{
+                        text-decoration: none;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                        padding: 15px 25px;
+                        color: $light-color;
+                        border-radius: 10px;
+                    }
+                }
+                #reseaux{
+                    width: 100%;
+                    height: 60%;
+                    display: flex;
+                    gap: 30px;
+                    div{
+                        height: 45px;
+                        width: 45px;
+                        border-radius: 100%;
+                        background-color: $grey-color;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        @media screen and (max-width: 1024px) {
+                            width: 30px;
+                            height: 30px;
+                        }
+                        img{
+                            width: 30px;
+                            height: 30px;
+
+                            @media screen and (max-width: 1024px) {
+                                width: 20px;
+                                height: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+            #milieu{
+                height: 100%;
+                width: 35%;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                color: $light-color;
+
+                @media screen and (max-width: 767px) {
+                    height: 33%;
+                    width: 100%;
+                    border-bottom: 2px solid $grey-color;
+                    gap: 20px;
+                }
+                h3{
+                    margin-top: 15px;
+                    font-weight: normal;
+                }
+            }
+            #droite{
+                height: 100%;
+                width: 35%;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                color: $light-color;
+
+                @media screen and (max-width: 767px) {
+                    height: 33%;
+                    width: 100%;
+                    gap: 20px;
+                }
+                h3{
+                    margin-top: 15px;
+                    font-weight: normal;
+                }
+                div{
+                    display: flex;
+                    width: 250px;
+                    height: 40px;
+                    margin-left: 15px;
+                    background-color: $grey-color;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-radius: 10px;
+                    input{
+                        height: 30px;
+                        background-color: $grey-color;
+                        border: none;
+                        margin-left: 15px;
+                        color: $light-color;
+                    }
+                    input::placeholder{
+                        color: $light-color;
+                    }
+                    img{
+                        width: 30px;
+                        height: 30px;
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+        #bas{
+            height: 25%;
+            width: 80%;
+            display: flex;
+            justify-content: end;
+            color: $light-color;
+            margin-top: 20px;
+
+            @media screen and (max-width: 767px) {
+                height: 15%;
             }
         }
     }
