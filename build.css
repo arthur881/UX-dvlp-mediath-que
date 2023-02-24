@@ -9,9 +9,6 @@
 
 body {
   background-color: #F8F8F8;
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 0 50px;
   position: relative;
   overflow-x: hidden;
 }
@@ -75,6 +72,15 @@ body #modalNewsLetter .formNewsLetter button:hover {
 body #modalNewsLetter.active {
   transform: translateX(0);
 }
+body .reveal {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+body .reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.3s;
+}
 body #menuBurger {
   display: none;
 }
@@ -112,11 +118,36 @@ body #menuBurger div a {
 body #menuBurger.active {
   transform: translateX(0);
 }
+body #flechehaut {
+  width: 50px;
+  height: 50px;
+  background-color: #3B4FDF;
+  position: fixed;
+  bottom: 20px;
+  left: -110%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transition: left 0.5s ease-in-out;
+}
+body #flechehaut img {
+  width: 35px;
+  height: 35px;
+}
+body #flechehaut.activeAffiche {
+  left: 25px;
+}
+body #flechehaut:hover {
+  transform: translateY(-15%);
+}
 body header {
+  max-width: 1300px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 20px 50px;
 }
 body header .log {
   display: flex;
@@ -130,6 +161,7 @@ body header .log a {
   padding: 15px 25px;
   color: #151515;
   border-radius: 10px;
+  transition: 0.3s;
 }
 @media screen and (max-width: 600px) {
   body header .log a {
@@ -139,6 +171,7 @@ body header .log a {
 body header .log a:nth-child(2) {
   color: #F8F8F8;
   background-color: #3B4FDF;
+  transition: 0.2s;
 }
 body header .log a:nth-child(1):hover {
   background-color: #3B4FDF;
@@ -146,6 +179,12 @@ body header .log a:nth-child(1):hover {
 }
 body header .log a:nth-child(2):hover {
   background-color: rgb(26, 44, 174);
+}
+body header .log a:nth-child(1):active {
+  transform: scale(0.97);
+}
+body header .log a:nth-child(2):active {
+  transform: scale(0.97);
 }
 body header .log img {
   display: none;
@@ -155,12 +194,22 @@ body header .log img {
     display: block;
   }
 }
+body main {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
 body main .hero {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 30px 0;
   height: 80vh;
+}
+@media screen and (max-width: 600px) {
+  body main .hero {
+    height: 50vh;
+  }
 }
 body main .hero .heroLeft {
   width: 50%;
@@ -203,10 +252,14 @@ body main .hero .heroLeft a {
   font-weight: 500;
   font-size: 1.2rem;
   cursor: pointer;
+  transition: 0.2s;
   margin-top: 40px;
 }
 body main .hero .heroLeft a:hover {
   background-color: rgb(26, 44, 174);
+}
+body main .hero .heroLeft button:active {
+  transform: scale(0.97);
 }
 body main .hero .heroRight {
   width: 50%;
@@ -319,7 +372,7 @@ body main #subscribeSection > div form > div .formNoms, body main #subscribeSect
   width: 80%;
   gap: 4%;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   body main #subscribeSection > div form > div .formNoms, body main #subscribeSection > div form > div .formCoords, body main #subscribeSection > div form > div .formAdresse {
     flex-direction: column;
     gap: 16px;
@@ -328,7 +381,7 @@ body main #subscribeSection > div form > div .formNoms, body main #subscribeSect
 body main #subscribeSection > div form > div .formCoords input:nth-child(1) {
   width: 160%;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   body main #subscribeSection > div form > div .formCoords input:nth-child(1) {
     width: 100%;
   }
@@ -336,7 +389,7 @@ body main #subscribeSection > div form > div .formCoords input:nth-child(1) {
 body main #subscribeSection > div form > div .formAdresse input:nth-child(1) {
   width: 25%;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   body main #subscribeSection > div form > div .formAdresse input:nth-child(1) {
     width: 100%;
   }
@@ -353,7 +406,7 @@ body main #subscribeSection > div form > div input {
   box-shadow: 4px 4px 8px rgba(122, 121, 123, 0.3960784314);
   border: rgba(255, 255, 255, 0) 2px solid;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   body main #subscribeSection > div form > div input {
     width: 100%;
   }
@@ -379,10 +432,14 @@ body main #subscribeSection > div form button {
   font-weight: 500;
   font-size: 1.2rem;
   cursor: pointer;
+  transition: 0.2s;
   margin-top: 40px;
 }
 body main #subscribeSection > div form button:hover {
   background-color: rgb(26, 44, 174);
+}
+body main #subscribeSection > div form button:active {
+  transform: scale(0.97);
 }
 body main .popUpThanks {
   display: none;
@@ -452,6 +509,171 @@ body main .popUpThanks button:hover {
 }
 body main .activePopUp {
   display: flex;
+}
+body footer {
+  height: 40vh;
+  background-color: #151515;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 80%;
+}
+@media screen and (max-width: 767px) {
+  body footer {
+    height: 100vh;
+  }
+}
+body footer #haut {
+  width: 80%;
+  height: 75%;
+  display: flex;
+  border-bottom: 2px solid #7A797B;
+  margin-top: 15px;
+}
+@media screen and (max-width: 767px) {
+  body footer #haut {
+    flex-direction: column;
+    height: 85%;
+  }
+}
+body footer #haut #gauche {
+  height: 100%;
+  width: 30%;
+}
+@media screen and (max-width: 767px) {
+  body footer #haut #gauche {
+    height: 33%;
+    width: 100%;
+    border-bottom: 2px solid #7A797B;
+  }
+}
+body footer #haut #gauche #logofooter {
+  height: 40%;
+  width: 100%;
+}
+body footer #haut #gauche #logofooter h2 {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 15px 25px;
+  color: #F8F8F8;
+  border-radius: 10px;
+}
+body footer #haut #gauche #reseaux {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  gap: 30px;
+}
+body footer #haut #gauche #reseaux div {
+  height: 45px;
+  width: 45px;
+  border-radius: 100%;
+  background-color: #7A797B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+@media screen and (max-width: 1024px) {
+  body footer #haut #gauche #reseaux div {
+    width: 30px;
+    height: 30px;
+  }
+}
+body footer #haut #gauche #reseaux div img {
+  width: 30px;
+  height: 30px;
+}
+@media screen and (max-width: 1024px) {
+  body footer #haut #gauche #reseaux div img {
+    width: 20px;
+    height: 20px;
+  }
+}
+body footer #haut #gauche #reseaux div:hover {
+  background-color: #5e5e5e;
+}
+body footer #haut #milieu {
+  height: 100%;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: #F8F8F8;
+}
+@media screen and (max-width: 767px) {
+  body footer #haut #milieu {
+    height: 33%;
+    width: 100%;
+    border-bottom: 2px solid #7A797B;
+    gap: 20px;
+  }
+}
+body footer #haut #milieu h3 {
+  margin-top: 15px;
+  font-weight: normal;
+}
+body footer #haut #droite {
+  height: 100%;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: #F8F8F8;
+}
+@media screen and (max-width: 767px) {
+  body footer #haut #droite {
+    height: 33%;
+    width: 100%;
+    gap: 20px;
+  }
+}
+body footer #haut #droite h3 {
+  margin-top: 15px;
+  font-weight: normal;
+}
+body footer #haut #droite div {
+  display: flex;
+  width: 250px;
+  height: 40px;
+  margin-left: 15px;
+  background-color: #7A797B;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+body footer #haut #droite div input {
+  height: 30px;
+  background-color: #7A797B;
+  border: none;
+  margin-left: 15px;
+  color: #F8F8F8;
+}
+body footer #haut #droite div input::placeholder {
+  color: #F8F8F8;
+}
+body footer #haut #droite div img {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+}
+body footer #bas {
+  height: 25%;
+  width: 80%;
+  display: flex;
+  justify-content: end;
+  color: #F8F8F8;
+  margin-top: 20px;
+}
+@media screen and (max-width: 767px) {
+  body footer #bas {
+    height: 15%;
+  }
 }
 
 /*# sourceMappingURL=build.css.map */
