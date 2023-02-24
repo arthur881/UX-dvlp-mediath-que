@@ -14,6 +14,66 @@ body {
   position: relative;
   overflow-x: hidden;
 }
+body #modalNewsLetter {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 30px;
+  right: 15px;
+  width: 400px;
+  background-color: #F8F8F8;
+  border-radius: 15px;
+  padding: 10px 30px;
+  box-shadow: 4px 4px 8px rgba(122, 121, 123, 0.3960784314);
+  transform: translateX(110%);
+  transition: transform 0.5s ease-in-out;
+}
+body #modalNewsLetter .imgWrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 10px 0;
+}
+body #modalNewsLetter .imgWrapper img {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+body #modalNewsLetter p {
+  color: #7A797B;
+  margin-bottom: 20px;
+}
+body #modalNewsLetter .formNewsLetter {
+  padding-bottom: 10px;
+}
+body #modalNewsLetter .formNewsLetter input {
+  padding: 12px 20px;
+  border-radius: 10px;
+  background-color: #F8F8F8;
+  font-weight: 500;
+  cursor: pointer;
+  border: rgb(219, 215, 215) 1px solid;
+}
+body #modalNewsLetter .formNewsLetter input:focus {
+  outline: none;
+}
+body #modalNewsLetter .formNewsLetter button {
+  border-radius: 10px;
+  border: none;
+  background-color: #3B4FDF;
+  color: #F8F8F8;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 10px 20px;
+  height: 42px;
+}
+body #modalNewsLetter .formNewsLetter button:hover {
+  background-color: rgb(26, 44, 174);
+}
+body #modalNewsLetter.active {
+  transform: translateX(0);
+}
 body #menuBurger {
   display: none;
 }
@@ -204,7 +264,7 @@ body main .subscribeSection {
   align-items: center;
   width: 100%;
   height: 70vh;
-  margin: 15vh 0;
+  margin: 10vh 0;
 }
 body main .subscribeSection h2 {
   font-size: 2rem;

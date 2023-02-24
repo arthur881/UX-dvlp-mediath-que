@@ -45,3 +45,21 @@ submitButton.addEventListener('click', (e) => {
         }
     })
 })
+
+//modal Newsletter
+
+const modalNewsletter = document.querySelector('#modalNewsLetter');
+const closeBtnModal = document.querySelector('#closeNewsLetter');
+localStorage.setItem('subscribe', 'false');
+
+if (localStorage.getItem('subscribe') != 'true') {
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            modalNewsletter.classList.add('active');
+        }, 2000);
+    });
+}
+
+closeBtnModal.addEventListener('click', () => {
+    modalNewsletter.classList.remove('active');
+});
