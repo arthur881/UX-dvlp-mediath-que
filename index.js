@@ -1,5 +1,3 @@
-localStorage.setItem('subscribe', 'false');
-
 //menu burger
 
 const burgerBtn = document.querySelector('#burgerBtn');
@@ -37,6 +35,7 @@ allInputs.forEach(input => {
 
 var submitButton = document.querySelector('form button');
 var popUpThanks = document.querySelector('.popUpThanks');
+var sendButtonNewsletter = document.querySelector('#modalNewsLetter button');
 
 submitButton.addEventListener('click', (e) => {
     e.preventDefault();
@@ -45,9 +44,15 @@ submitButton.addEventListener('click', (e) => {
             input.classList.add('error');
         } else {
             localStorage.setItem('subscribe', 'true');
-            popUpThanks.classList.add('active');
+            popUpThanks.classList.add('activePopUp');
         }
     })
+})
+
+sendButtonNewsletter.addEventListener('click', (e) => {
+    e.preventDefault();
+    localStorage.setItem('subscribe', 'true');
+    popUpThanks.classList.add('activePopUp');
 })
 
 var buttonClose = document.querySelector('.popUpThanks button');
@@ -55,3 +60,21 @@ var buttonClose = document.querySelector('.popUpThanks button');
 buttonClose.addEventListener('click', () => {
     window.location.href=''
 })
+
+
+//modal Newsletter
+
+const modalNewsletter = document.querySelector('#modalNewsLetter');
+const closeBtnModal = document.querySelector('#closeNewsLetter');
+
+if (localStorage.getItem('subscribe') != 'true') {
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            modalNewsletter.classList.add('active');
+        }, 2000);
+    });
+}
+
+closeBtnModal.addEventListener('click', () => {
+    modalNewsletter.classList.remove('active');
+});
