@@ -1,3 +1,5 @@
+localStorage.setItem('subscribe', 'false');
+
 //menu burger
 
 const burgerBtn = document.querySelector('#burgerBtn');
@@ -34,14 +36,22 @@ allInputs.forEach(input => {
 })
 
 var submitButton = document.querySelector('form button');
+var popUpThanks = document.querySelector('.popUpThanks');
 
 submitButton.addEventListener('click', (e) => {
+    e.preventDefault();
     allInputs.forEach(input => {
         if (input.value == "") {
-            e.preventDefault();
             input.classList.add('error');
         } else {
-            input.classList.add('valid');
+            localStorage.setItem('subscribe', 'true');
+            popUpThanks.classList.add('active');
         }
     })
+})
+
+var buttonClose = document.querySelector('.popUpThanks button');
+
+buttonClose.addEventListener('click', () => {
+    window.location.href=''
 })

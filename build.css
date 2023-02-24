@@ -324,5 +324,74 @@ body main #subscribeSection > div form button {
 body main #subscribeSection > div form button:hover {
   background-color: rgb(26, 44, 174);
 }
+body main .popUpThanks {
+  display: none;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+body main .popUpThanks > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F8F8F8;
+  width: 55%;
+  border-radius: 12px;
+  margin: auto;
+  padding: 60px 0;
+}
+body main .popUpThanks .contentPopUp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+}
+body main .popUpThanks .contentPopUp .titlePopUp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 18px;
+}
+body main .popUpThanks .contentPopUp .titlePopUp img {
+  width: 40px;
+  height: 40px;
+}
+body main .popUpThanks .contentPopUp .titlePopUp h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: black;
+}
+body main .popUpThanks .contentPopUp span {
+  color: #7A797B;
+  padding-bottom: 20px;
+}
+body main .popUpThanks button {
+  padding: 15px 25px;
+  border-radius: 10px;
+  border: none;
+  background-color: #3B4FDF;
+  color: #F8F8F8;
+  font-weight: 500;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 20px;
+}
+body main .popUpThanks button:hover {
+  background-color: rgb(26, 44, 174);
+}
+body main .active {
+  display: flex;
+}
 
 /*# sourceMappingURL=build.css.map */
