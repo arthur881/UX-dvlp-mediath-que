@@ -36,9 +36,9 @@ allInputs.forEach(input => {
 var submitButton = document.querySelector('form button');
 
 submitButton.addEventListener('click', (e) => {
-    e.preventDefault();
     allInputs.forEach(input => {
         if (input.value == "") {
+            e.preventDefault();
             input.classList.add('error');
         } else {
             input.classList.add('valid');

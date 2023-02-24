@@ -4,6 +4,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -192,7 +193,8 @@ body main .hero .heroLeft div:nth-child(2) p {
   color: #7A797B;
   max-width: 300px;
 }
-body main .hero .heroLeft button {
+body main .hero .heroLeft a {
+  text-decoration: none;
   padding: 15px 25px;
   border-radius: 10px;
   border: none;
@@ -203,7 +205,7 @@ body main .hero .heroLeft button {
   cursor: pointer;
   margin-top: 40px;
 }
-body main .hero .heroLeft button:hover {
+body main .hero .heroLeft a:hover {
   background-color: rgb(26, 44, 174);
 }
 body main .hero .heroRight {
@@ -258,7 +260,7 @@ body main .HIW .HIW-cardsWrapper .HIW-card {
 body main .HIW .HIW-cardsWrapper .HIW-card p {
   color: #7A797B;
 }
-body main .subscribeSection {
+body main #subscribeSection {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -266,17 +268,17 @@ body main .subscribeSection {
   height: 70vh;
   margin: 10vh 0;
 }
-body main .subscribeSection h2 {
+body main #subscribeSection h2 {
   font-size: 2rem;
   font-weight: 700;
   padding-bottom: 20px;
   color: black;
 }
-body main .subscribeSection span {
+body main #subscribeSection span {
   color: #7A797B;
   padding-bottom: 20px;
 }
-body main .subscribeSection > div {
+body main #subscribeSection > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -285,11 +287,11 @@ body main .subscribeSection > div {
   width: 80%;
 }
 @media screen and (max-width: 600px) {
-  body main .subscribeSection > div {
+  body main #subscribeSection > div {
     width: 100%;
   }
 }
-body main .subscribeSection > div form {
+body main #subscribeSection > div form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -297,7 +299,7 @@ body main .subscribeSection > div form {
   gap: 20px;
   width: 100%;
 }
-body main .subscribeSection > div form > div {
+body main #subscribeSection > div form > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -306,11 +308,11 @@ body main .subscribeSection > div form > div {
   gap: 30px;
 }
 @media screen and (max-width: 600px) {
-  body main .subscribeSection > div form > div {
+  body main #subscribeSection > div form > div {
     gap: 16px;
   }
 }
-body main .subscribeSection > div form > div .formNoms, body main .subscribeSection > div form > div .formCoords, body main .subscribeSection > div form > div .formAdresse {
+body main #subscribeSection > div form > div .formNoms, body main #subscribeSection > div form > div .formCoords, body main #subscribeSection > div form > div .formAdresse {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -318,28 +320,28 @@ body main .subscribeSection > div form > div .formNoms, body main .subscribeSect
   gap: 4%;
 }
 @media screen and (max-width: 600px) {
-  body main .subscribeSection > div form > div .formNoms, body main .subscribeSection > div form > div .formCoords, body main .subscribeSection > div form > div .formAdresse {
+  body main #subscribeSection > div form > div .formNoms, body main #subscribeSection > div form > div .formCoords, body main #subscribeSection > div form > div .formAdresse {
     flex-direction: column;
     gap: 16px;
   }
 }
-body main .subscribeSection > div form > div .formCoords input:nth-child(1) {
+body main #subscribeSection > div form > div .formCoords input:nth-child(1) {
   width: 160%;
 }
 @media screen and (max-width: 600px) {
-  body main .subscribeSection > div form > div .formCoords input:nth-child(1) {
+  body main #subscribeSection > div form > div .formCoords input:nth-child(1) {
     width: 100%;
   }
 }
-body main .subscribeSection > div form > div .formAdresse input:nth-child(1) {
+body main #subscribeSection > div form > div .formAdresse input:nth-child(1) {
   width: 25%;
 }
 @media screen and (max-width: 600px) {
-  body main .subscribeSection > div form > div .formAdresse input:nth-child(1) {
+  body main #subscribeSection > div form > div .formAdresse input:nth-child(1) {
     width: 100%;
   }
 }
-body main .subscribeSection > div form > div input {
+body main #subscribeSection > div form > div input {
   width: 80%;
   padding: 12px 24px;
   border-radius: 10px;
@@ -348,27 +350,27 @@ body main .subscribeSection > div form > div input {
   font-weight: 500;
   font-size: 1.2rem;
   cursor: pointer;
-  box-shadow: 4px 4px 8px #7A797B;
+  box-shadow: 4px 4px 8px rgba(122, 121, 123, 0.3960784314);
   border: rgba(255, 255, 255, 0) 2px solid;
 }
 @media screen and (max-width: 600px) {
-  body main .subscribeSection > div form > div input {
+  body main #subscribeSection > div form > div input {
     width: 100%;
   }
 }
-body main .subscribeSection > div form > div input::placeholder {
+body main #subscribeSection > div form > div input::placeholder {
   color: #7A797B;
 }
-body main .subscribeSection > div form > div input:focus {
+body main #subscribeSection > div form > div input:focus {
   outline: none;
 }
-body main .subscribeSection > div form > div .valid {
+body main #subscribeSection > div form > div .valid {
   border: #058E3F 2px solid;
 }
-body main .subscribeSection > div form > div .error {
+body main #subscribeSection > div form > div .error {
   border: #E60000 2px solid;
 }
-body main .subscribeSection > div form button {
+body main #subscribeSection > div form button {
   padding: 15px 25px;
   border-radius: 10px;
   border: none;
@@ -379,7 +381,7 @@ body main .subscribeSection > div form button {
   cursor: pointer;
   margin-top: 40px;
 }
-body main .subscribeSection > div form button:hover {
+body main #subscribeSection > div form button:hover {
   background-color: rgb(26, 44, 174);
 }
 
