@@ -1,5 +1,5 @@
 //menu burger
-
+/*
 const burgerBtn = document.querySelector('#burgerBtn');
 const burgerMenu = document.querySelector('#menuBurger');
 const closeBtn = document.querySelector('#closeBtn');
@@ -12,7 +12,7 @@ closeBtn.addEventListener('click', () => {
     burgerMenu.classList.remove('active');
 });
 
-
+*/
 var allInputs = document.querySelectorAll('input');
 
 // Valide input
