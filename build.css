@@ -26,6 +26,12 @@ body #modalNewsLetter {
   box-shadow: 4px 4px 8px rgba(122, 121, 123, 0.3960784314);
   transform: translateX(110%);
   transition: transform 0.5s ease-in-out;
+  z-index: 10;
+}
+@media screen and (max-width: 600px) {
+  body #modalNewsLetter {
+    right: 0;
+  }
 }
 body #modalNewsLetter .imgWrapper {
   display: flex;
@@ -86,7 +92,7 @@ body #menuBurger {
 }
 @media screen and (max-width: 600px) {
   body #menuBurger {
-    transform: translateX(100%);
+    transform: translateX(110%);
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -99,6 +105,7 @@ body #menuBurger {
     background-color: #151515;
     color: #F8F8F8;
     transition: transform 0.5s ease-in-out;
+    z-index: 20;
   }
 }
 body #menuBurger div {
@@ -129,7 +136,7 @@ body #flechehaut {
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  transition: left 0.5s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 body #flechehaut img {
   width: 35px;
