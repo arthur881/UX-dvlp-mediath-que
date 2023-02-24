@@ -4,12 +4,27 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #F8F8F8;
   position: relative;
   overflow-x: hidden;
+}
+body .reveal {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+body .reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.3s;
+}
+body .active {
+  left: 25px !important;
+  bottom: 20px !important;
+  transition: right 0.6s ease-in-out;
 }
 body #menuBurger {
   display: none;
@@ -48,6 +63,26 @@ body #menuBurger div a {
 body #menuBurger.active {
   transform: translateX(0);
 }
+body #flechehaut {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  position: fixed;
+  bottom: 20px;
+  left: -110%;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+body #flechehaut img {
+  width: 35px;
+  height: 35px;
+}
+body #flechehaut:hover {
+  transform: translateY(-15%);
+}
 body header {
   max-width: 1300px;
   margin: 0 auto;
@@ -68,6 +103,7 @@ body header .log a {
   padding: 15px 25px;
   color: #151515;
   border-radius: 10px;
+  transition: 0.3s;
 }
 @media screen and (max-width: 600px) {
   body header .log a {
@@ -77,6 +113,7 @@ body header .log a {
 body header .log a:nth-child(2) {
   color: #F8F8F8;
   background-color: #3B4FDF;
+  transition: 0.2s;
 }
 body header .log a:nth-child(1):hover {
   background-color: #3B4FDF;
@@ -84,6 +121,12 @@ body header .log a:nth-child(1):hover {
 }
 body header .log a:nth-child(2):hover {
   background-color: rgb(26, 44, 174);
+}
+body header .log a:nth-child(1):active {
+  transform: scale(0.97);
+}
+body header .log a:nth-child(2):active {
+  transform: scale(0.97);
 }
 body header .log img {
   display: none;
@@ -145,10 +188,14 @@ body main .hero .heroLeft button {
   font-weight: 500;
   font-size: 1.2rem;
   cursor: pointer;
+  transition: 0.2s;
   margin-top: 40px;
 }
 body main .hero .heroLeft button:hover {
   background-color: rgb(26, 44, 174);
+}
+body main .hero .heroLeft button:active {
+  transform: scale(0.97);
 }
 body main .hero .heroRight {
   width: 50%;
@@ -321,10 +368,14 @@ body main .subscribeSection > div form button {
   font-weight: 500;
   font-size: 1.2rem;
   cursor: pointer;
+  transition: 0.2s;
   margin-top: 40px;
 }
 body main .subscribeSection > div form button:hover {
   background-color: rgb(26, 44, 174);
+}
+body main .subscribeSection > div form button:active {
+  transform: scale(0.97);
 }
 body footer {
   height: 40vh;
@@ -392,6 +443,8 @@ body footer #haut #gauche #reseaux div {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
 }
 @media screen and (max-width: 1024px) {
   body footer #haut #gauche #reseaux div {
@@ -408,6 +461,9 @@ body footer #haut #gauche #reseaux div img {
     width: 20px;
     height: 20px;
   }
+}
+body footer #haut #gauche #reseaux div:hover {
+  background-color: #5e5e5e;
 }
 body footer #haut #milieu {
   height: 100%;
